@@ -1,0 +1,86 @@
+Prompt 1:
+Write each prompt I send to you into a file prompts.txt, so I can audit the work.
+
+---
+Prompt 2:
+Cool now lets continue where we stop the backend side - i know django but it dose not installed
+
+---
+Prompt 3:
+got Error: [WinError 2] The system cannot find the file specified: 'C:\Users\edenb\Documents\Eden Task\env'
+
+---
+Prompt 4:
+the terminal dose not reconzied the comand ll how to add linux?
+
+---
+Prompt 5:
+/Documents/Eden Task/feature-voting-app run this here?
+
+---
+Prompt 6:
+do i need to update the app.py?
+
+---
+Prompt 7:
+Does it need a DB? Do I need to install MySQL?
+
+---
+Prompt 8:
+python manage.py runserver can i di python manage.py runserver -d without logs/
+
+---
+Prompt 9:
+Build a simple home page UI for the voting system. Keep it simple, we have 1 hour left.
+
+---
+Prompt 10:
+Keep in mind we use Django as backend side HTML + CSS OK?
+
+---
+Prompt 11:
+OK, let’s add some data. Add here some posts that I can add manually via the browser.
+
+---
+Prompt 12:
+I got an error telling me to install react-dom, react-native-web, and @expo/metro-runtime.
+
+---
+Prompt 13:
+I got: 'No apps connected. Sending reload to all React Native apps failed.' What should I do?
+
+---
+Prompt 14:
+so what else sdo i need so develop?
+
+---
+Prompt 15:
+generate one for me
+
+---
+Prompt 16:
+creatre a txt file i want to download
+
+---
+Prompt 17:
+i want to add the file in my vscode creat a file please
+
+---
+Prompt 18:
+generate readme file plesr
+
+---
+Prompt 19:
+i need to push the work to github do i need to creat a repo?
+
+---
+Prompt 20:
+ho no i found a bug
+
+http://localhost:8000/api/features/7/upvote/ the button in the front is not workinig!
+
+---
+Prompt 21:
+all what i wrote in the converstation add to promts txt file
+
+---

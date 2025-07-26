@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Feature Voting App</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script>
+    async function load() {
+      const res = await fetch("/api/features/");
+      const data = await res.json();
+      const list = document.getElementById("list");
+      list.innerHTML = "";
+      data.forEach(item => {
+        list.insertAdjacentHTML("beforeend", `
+          <div class="card">
+            <strong>${item.title}</strong><br/>
+            <small>${item.description || ""}</small><br/>
+            Votes: <span id="votes-${item.id}">${item.votes}</span><br/>
+            <button onclick="upvote(${item.id})">Up‑vote</button>
+          </div>
+        `);
+      });
+    }
+    async function upvote(id) {
+      await fetch(`/api/features/${id}/upvote/`, { method: "POST" });
+      const span = document.getElementById(`votes-${id}`);
+      span.textContent = parseInt(span.textContent) + 1;
+    }
+    async function addFeature(e) {
+      e.preventDefault();
+      const title = document.getElementById("title").value.trim();
+      if (!title) return alert("Title required");
+      const description = document.getElementById("desc").value;
+      await fetch("/api/features/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title, description })
+      });
+      e.target.reset();
+      load();
+    }
+    document.addEventListener("DOMContentLoaded", load);
+  </script>
+</head>
+
+<body>
+  <p>qwer</p>
+  <h1>Feature Voting App</h1>
+
+  <div id="list"><em>Loading…</em></div>
+
+  <form onsubmit="addFeature(event)">
+    <h2>Add a Feature</h2>
+    <input id="title" placeholder="Title" required />
+    <textarea id="desc" rows="3" placeholder="Description (optional)"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>

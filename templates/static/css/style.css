@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; margin: 2rem; }
+h1  { margin-bottom: 1rem; }
+.card {
+  border: 1px solid #ccc; border-radius: 6px; padding: 12px; margin: 8px 0;
+}
+.card button { margin-top: 8px; }
+form { margin-top: 2rem; }
+input, textarea {
+  width: 100%; padding: 8px; margin: 4px 0 12px 0; border: 1px solid #ccc; border-radius: 4px;
+}
